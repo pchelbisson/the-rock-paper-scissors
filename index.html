@@ -9,17 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 
 <body>
 
-    <h2><i class="fa-solid fa-robot"></i>: <span id="computer-choice"></span></h2>
-    <h2><i class="fa-solid fa-person-half-dress"></i>: <span id="user-choice"></span></h2>
-    <h2>Результат: <span id="result"></span></h2>
+    <div class="container">
+        <h2><i class="fa-solid fa-robot"></i>: <span id="computer-choice"></span></h2>
+        <h2><i class="fa-solid fa-person-half-dress"></i>: <span id="user-choice"></span></h2>
+        <h2>RESULT: <span id="result"></span></h2>
 
-    <button id="камень">КАМЕНЬ</button>
-    <button id="бумага">БУМАГА</button>
-    <button id="ножницы">НОЖНИЦЫ</button>
+        <div class="btn-wrap">
+            <button class="rock" id="rock"></button>
+            <button class="paper" id="paper"></button>
+            <button class="scissors" id="scissors"></button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

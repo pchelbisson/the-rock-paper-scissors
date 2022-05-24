@@ -1,0 +1,65 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 1200px;
+  background-color: #e5e5e5;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn-wrap {
+  display: flex;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: transparent;
+}
+
+.scissors {
+  background-image: url(../img/hand-scissors-solid.svg);
+  background-size: 50px 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.paper {
+  background-image: url(../img/hand-solid.svg);
+  background-size: 50px 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.rock {
+  background-image: url(../img/hand-back-fist-solid.svg);
+  background-size: 50px 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}

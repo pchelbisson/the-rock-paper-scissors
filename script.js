@@ -19,38 +19,40 @@ function generateComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3) + 1; // или можно использовать possibleChoices.length т.е( * possibleChoices.length)
 
   if (randomNumber === 1) {
-    computerChoice = "камень";
+    computerChoice = "rock";
   }
   if (randomNumber === 2) {
-    computerChoice = "ножницы";
+    computerChoice = "scissors";
   }
   if (randomNumber === 3) {
-    computerChoice = "бумага";
+    computerChoice = "paper";
   }
   computerChoiceDisplay.innerHTML = computerChoice;
 }
 
 function getResult() {
   if (computerChoice === userChoice) {
-    result = "НИЧЬЯ";
+    result = "DRAW, TRY AGAIN";
   }
-  if (computerChoice === "камень" && userChoice === "бумага") {
-    result = "ТЫ ПОБЕДИЛ!";
+  if (computerChoice === "rock" && userChoice === "paper") {
+    result = "YOU WIN!";
   }
-  if (computerChoice === "камень" && userChoice === "ножницы") {
-    result = "ТЫ ПРОИГРАЛ!";
+  if (computerChoice === "rock" && userChoice === "scissors") {
+    result = "YOU LOSE!";
   }
-  if (computerChoice === "бумага" && userChoice === "ножницы") {
-    result = "ТЫ ПОБЕДИЛ!";
+  if (computerChoice === "paper" && userChoice === "scissors") {
+    result = "YOU WIN!";
   }
-  if (computerChoice === "бумага" && userChoice === "камень") {
-    result = "ТЫ ПРОИГРАЛ!";
+  if (computerChoice === "paper" && userChoice === "rock") {
+    result = "YOU LOSE!";
   }
-  if (computerChoice === "ножницы" && userChoice === "камень") {
-    result = "ТЫ ПОБЕДИЛ!";
+  if (computerChoice === "scissors" && userChoice === "rock") {
+    result = "YOU WIN!";
   }
-  if (computerChoice === "ножницы" && userChoice === "бумага") {
-    result = "ТЫ ПРОИГРАЛ!";
+  if (computerChoice === "scissors" && userChoice === "paper") {
+    result = "YOU LOSE!";
   }
-  resultDisplay.innerHTML = result;
+  setTimeout(() => {
+    resultDisplay.innerHTML = result;
+  }, 200);
 }
